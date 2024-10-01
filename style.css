@@ -1,0 +1,289 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+body{
+    background-color: hsl(36, 100%, 99%);
+}
+.container{
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 70px 20px 70px;
+}
+ header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+nav{
+    display: flex;
+}
+nav .menu{
+    display: flex;
+}
+nav .menu li{
+    list-style-type: none;
+    font-weight: 600;
+    margin-right: 50px;
+}
+nav .menu li.categories{
+    margin-right: unset;
+}
+.hamburger{
+    display: none;
+}
+.hamburger-close{
+    margin-top: 10px;
+    display: none;
+    margin-right: 40px;
+}
+.hamburger, .hamburger-close:hover{
+    cursor: pointer;
+}
+
+
+li:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+    transition: 0.2s;
+}
+.image img{
+    width:100%;
+    height: 200px;
+}
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows:1fr ;
+    gap: 20px;
+}
+.inner{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.the-bright{
+    display: grid;
+    grid-template-columns: 0.6fr 0.9fr ;
+    gap: 30px;  
+}
+.the-bright h1{
+    font-weight: 900;
+    font-size: 38px;
+}
+.the-bright p{
+    line-height: 25px;
+    font-size: 15px;
+}
+button{
+    margin-top: 15px;
+    background-color: hsl(5, 85%, 63%);
+    padding: 8px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+}
+button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: hsl(240, 100%, 5%);
+    transition: 0.2s;
+}
+aside{
+    background-color: hsl(240, 100%, 5%);
+    padding: 20px;
+}
+aside section{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+aside h1{
+    color: hsl(35, 77%, 62%);
+    padding-bottom: 10px;
+}
+aside section h4{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: hsl(36, 100%, 99%);
+}
+aside section h4:hover{
+    color:hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+aside section p{
+    line-height: 22px;
+    color: hsl(36, 100%, 99%);
+    opacity: 70%;
+    font-size: 13px;
+}
+footer img{
+    width: 70px;
+}
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:200px;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 25px;
+    /* background-color: green; */
+}
+footer .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px;
+}
+footer .number{
+    color: hsl(5, 85%, 63%);
+    font-size: 25px;
+    font-weight: 700;
+}
+footer h5{
+    font-weight: 600;
+    font-size: 15px;
+}
+footer h5:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+footer .text{
+    font-size: 12px;
+    opacity: 70%;
+}
+
+@media only screen and (max-width:1000px){
+    footer,
+    main{
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        gap: unset;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows:1fr ;
+        gap: 20px;
+    }
+    .hamburger{
+        display: block;
+        /* justify-content:flex-end; */
+    }
+    .hamburger-close{
+        display: none;
+        position: relative;
+        left: 30px;
+    }
+    .hidden{
+        display: none;
+    }
+    .menu{
+        display: unset;
+    }
+  
+    .menu{
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        margin-bottom: 60px;
+        height: 470px;
+        right: 70px;
+        top: 30px;
+        background-color: white; /* Adjust based on your design */
+        padding: 70px 30px 0 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    nav  li{
+        margin-bottom: 20px;
+        padding-left: 10px;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:100px;
+        gap: 10px;
+        margin-bottom: 20px;
+        /* background-color: green; */
+    }
+}
+
+@media  only screen and (max-width:930px) {
+    footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu{
+        position: absolute;
+        width: 400px;
+        height: 430px;
+        right: 70px;
+        top: 30px;
+        background-color: white; /* Adjust based on your design */
+        padding: 70px 30px 0 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    nav  li{
+        margin-bottom: 60px;
+        padding-left: 10px;
+    }
+}
+@media only screen and (max-width:690px) {
+    .container{
+        width: 100%;
+        padding: 30px 20px 20px 20px;
+    }
+    .container.gradient-effect {
+    background: linear-gradient(
+        rgba(208, 212, 216, 0.5), /* Starting color (with transparency) */
+        rgba(196, 197, 199, 0.5) /* Ending color (with transparency) */
+    );
+    opacity: 70%;
+}
+
+
+    .menu{
+        position: absolute;
+        width: 200px;
+        height: 100vh;
+        right: 0px;
+        top: 30px;
+        background-color: white; /* Adjust based on your design */
+        padding: 70px 30px 0 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .the-bright{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 30px;  
+    }
+    footer,
+    footer.wrapper{
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+    }
+   footer{
+    grid-template-columns: 1fr;
+   }
+   footer img{
+    width: 100px;
+   }
+   footer .wrapper{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    gap: 10px;
+}
+}
+
+
+
+
